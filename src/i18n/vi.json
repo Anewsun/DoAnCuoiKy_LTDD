@@ -1,0 +1,178 @@
+{
+  "loginScreen": {
+    "pleaseLogin": "Đăng nhập để đọc truyện miễn phí bằng app HTReader!",
+    "login": "Đăng nhập",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "invalidEmail": "Email không hợp lệ",
+    "enterEmail": "Vui lòng nhập email",
+    "invalidMinPassword": "Mật khẩu tối thiểu phải có 8 ký tự!",
+    "enterPassword": "Vui lòng nhập mật khẩu",
+    "forgotPassword": "Quên mật khẩu ?",
+    "noAccount": "Bạn không có tài khoản?",
+    "signUp": "Đăng ký",
+    "loginSuccess": "Đăng nhập thành công !"
+  },
+  "signUpScreen": {
+    "pleaseSignUp": "Đăng ký để tham gia đọc truyện!",
+    "signUp": "Đăng ký",
+    "fullname": "Tên của bạn",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "invalidEmail": "Email không hợp lệ",
+    "enterEmail": "Vui lòng nhập email",
+    "invalidMinPassword": "Mật khẩu tối thiểu phải có 8 ký tự!",
+    "enterPassword": "Vui lòng nhập mật khẩu",
+    "enterFullname": "Vui lòng nhập tên của bạn",
+    "haveAnAccount": "Bạn đã có tài khoản?",
+    "login": "Đăng nhập",
+    "signUpSuccess": "Đăng ký thành công !"
+  },
+  "resetPasswordScreen": {
+    "title": "Quên mật khẩu",
+    "email": "Email",
+    "invalidEmail": "Email không hợp lệ",
+    "enterEmail": "Vui lòng nhập email",
+    "pleaseEnterEmail": "Vui lòng nhập địa chỉ email của bạn để đặt lại mật khẩu",
+    "submit": "Gửi",
+    "pleaseCheck": "Kiểm tra hộp thư Email của bạn",
+    "checkEmail": "Vui lòng kiểm tra hộp thư đến và làm theo các hướng dẫn để hoàn tất thiết lập đặt lại mật khẩu của bạn.",
+    "returnToLogin": "Quay về đăng nhập"
+  },
+  "profileScreen": {
+    "title": "Account",
+    "signOut": "Đăng xuất",
+    "edit": "Chỉnh sửa thông tin",
+    "changePassword": "Đổi mật khẩu",
+    "bookmarkComic": "Truyện đã yêu thích"
+  },
+  "changePasswordScreen": {
+    "title": "Đổi mật khẩu",
+    "labelOldPassword": "Mật khẩu cũ",
+    "hintOldPassword": "Nhập mật khẩu cũ",
+    "labelNewPassword": "Mật khẩu mới",
+    "hintNewPassword": "Nhập mật khẩu mới",
+    "invalidMinPassword": "Mật khẩu tối thiểu phải có 8 ký tự!",
+    "enterPassword": "Vui lòng nhập mật khẩu",
+    "submit": "Lưu",
+    "changePasswordSuccess": "Đổi mật khẩu thành công",
+    "forgotPassword": "Quên mật khẩu ?"
+  },
+  "editProfileScreen": {
+    "title": "Chỉnh sửa thông tin",
+    "labelFullname": "Tên",
+    "hintFullname": "Nhập tên",
+    "enterFullname": "Vui lòng nhập tên của bạn",
+    "labelEmail": "Email",
+    "submit": "Lưu",
+    "updatedSuccess": "Cập nhật thông tin người dùng thành công"
+  },
+  "createComicScreen": {
+    "title": "Tạo truyện mới",
+    "labelName": "Tên truyện",
+    "hintName": "Nhập tên truyện...",
+    "lableCoverImage": "Link ảnh bìa",
+    "hintCoverImage": "Vui lòng nhập đường dẫn ảnh",
+    "labelContent": "Nội dung",
+    "hintContent": "Nhập nội dung...",
+    "submit": "Thêm",
+    "enterTitle": "Chưa nhập tên truyện",
+    "enterImage": "Chưa nhập link ảnh",
+    "enterContent": "Chưa nhập nội dung",
+    "createSuccess": "Đã thêm thành công!",
+    "labelDescription": "Mô tả",
+    "hintDescription": "Nhập mô tả",
+    "enterDescription": "Chưa nhập mô tả"
+  },
+  "editComicScreen": {
+    "title": "Chỉnh sửa truyện",
+    "labelName": "Tên truyện",
+    "hintName": "Nhập tên truyện...",
+    "lableCoverImage": "Link ảnh bìa",
+    "hintCoverImage": "Vui lòng nhập đường dẫn ảnh",
+    "labelContent": "Nội dung",
+    "hintContent": "Nhập nội dung...",
+    "submit": "Lưu",
+    "enterTitle": "Chưa nhập tên truyện",
+    "enterImage": "Chưa nhập link ảnh",
+    "enterContent": "Chưa nhập nội dung",
+    "editedSuccess": "Sửa thành công!",
+    "labelDescription": "Mô tả",
+    "hintDescription": "Nhập mô tả",
+    "enterDescription": "Chưa nhập mô tả"
+  },
+  "comicDetailScreen": {
+    "title": "Chi tiết truyện",
+    "writeAReview": "Đánh giá",
+    "readNow": "Đọc ngay",
+    "addedFavorite": "Đã thêm vào yêu thích",
+    "deletedFavorite": "Đã xoá khỏi yêu thích",
+    "share": "Chia sẻ",
+    "favorite": "Yêu thích",
+    "seeReviews": "Xem Đánh giá"
+  },
+  "createReviewScreen": {
+    "post": "Gửi",
+    "rateThisComic": "Đánh giá truyện",
+    "enterReview": "Nhập đánh giá (tuỳ chọn)",
+    "minRating": "Vui lòng đánh giá số sao"
+  },
+  "editReviewScreen": {
+    "post": "Cập nhật",
+    "rateThisComic": "Chỉnh sửa đánh giá truyện",
+    "enterReview": "Nhập đánh giá (tuỳ chọn)",
+    "minRating": "Vui lòng đánh giá số sao"
+  },
+  "comicReviewsScreen": {
+    "title": "Thông tin đánh giá",
+    "delete": "Xoá",
+    "edit": "Sửa",
+    "noReviewsYet": "Chưa có đánh giá"
+  },
+  "favoritesScreen": {
+    "title": "Truyện đã yêu thích",
+    "noFavoritesYet": "Chưa có truyện yêu thích nào",
+    "yes": "Yes",
+    "no": "No",
+    "unfavorite": "Bỏ yêu thích truyện này?",
+    "deletedFavorite": "Đã xoá khỏi yêu thích"
+  },
+  "comicListScreen": {
+    "title": "Đăng bài",
+    "edit": "Sửa",
+    "delete": "Xoá",
+    "createComic": "Thêm truyện"
+  },
+  "homeScreen": {
+    "title": "Menu",
+    "noResult": "Không có kết quả",
+    "sortDesc": "Mới nhất",
+    "sortAsc": "Cũ nhất"
+  },
+  "searchScreen": {
+    "search": "Tìm kiếm truyện...",
+    "noResult": "Không có kết quả"
+  },
+  "component": {
+    "loading": {
+      "loading": "Loading"
+    },
+    "tabBar": {
+      "home": "Home",
+      "profile": "Account"
+    },
+    "drawerCustom": {
+      "home": "Home",
+      "post": "Đăng bài",
+      "favorite": "Truyện đã yêu thích",
+      "allComic": "Tất cả truyện",
+      "appInfor": "Thông tin app",
+      "signOut": "Đăng xuất"
+    }
+  },
+  "auth/network-request-failed": "Mất kết nối mạng",
+  "auth/user-not-found": "Người dùng không tồn tại",
+  "auth/wrong-password": "Sai mật khẩu",
+  "auth/too-many-requests": "Vui lòng thử lại sau",
+  "auth/email-already-in-use": "Email đã được sử dụng"
+}
