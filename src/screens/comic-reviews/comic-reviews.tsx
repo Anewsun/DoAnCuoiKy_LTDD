@@ -109,7 +109,7 @@ const ComicReviewsScreen: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Header isBack={false} title={t("title")} />
+      <Header isBack={true} title={t("title")} />
       <FlatList
         data={reviews}
         renderItem={({ item }) => {

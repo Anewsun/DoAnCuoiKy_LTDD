@@ -16,3 +16,4 @@ export { default as FavoriteListScreen } from "./favorite-list/favorite-list";
 export { default as ComicListScreen } from "./comic-list/comic-list";
 export { default as EditComicScreen } from "./edit-comic/edit-comic";
 export { default as SearchScreen } from "./search/search";
+export { default as ComicIntroductionScreen } from "./comic-intro/comic-intro";

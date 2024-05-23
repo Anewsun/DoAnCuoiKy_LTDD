@@ -73,7 +73,7 @@ const EditReviewScreen: React.FC = () => {
   return (
     <View style={styles.container}>
       <Header
-        isBackType={"close"}
+        isBack
         title={t("rateThisComic")}
         rightComponent={
           <TouchableOpacity

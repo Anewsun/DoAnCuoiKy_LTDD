@@ -20,6 +20,7 @@ import Share from "react-native-share";
 import comicDetailStyles from "./styles";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "@navigation";
+import { ScrollView } from "react-native-gesture-handler";
 
 type ComicDetailScreenRouteProps = NativeStackScreenProps<
   RootStackParamList,
@@ -124,10 +125,10 @@ const ComicDetailScreen: React.FC = () => {
 
   return (
     <>
-      <View style={styles.container}>
-        <Header isBack={false} title={data.title} />
+      <ScrollView style={styles.container}>
+        <Header isBack={true} title={data.title} />
         <Text style={styles.content}>{data.content}</Text>
-      </View>
+      </ScrollView>
       <View
         style={[
           styles.buttonWrapper,

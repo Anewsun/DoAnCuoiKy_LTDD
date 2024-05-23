@@ -27,10 +27,13 @@ export type RootStackParamList = {
   };
   FavoriteList: undefined;
   ComicList: undefined;
-  EditComnic: {
+  EditComic: {
     item: IComic;
   };
   Search: undefined;
+  ComicIntroduction: {
+    item: IComic;
+  };
 };
 
 declare global {

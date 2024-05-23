@@ -28,8 +28,6 @@ const TabStack: React.FC = () => {
     >
       <Stack.Screen name={"Home"} component={HomeScreen} />
       <Stack.Screen name={"Profile"} component={ProfileScreen} />
-      {/* <Stack.Screen name={"FavoriteList"} component={FavoriteListScreen} />
-      <Stack.Screen name={"ComicList"} component={ComicListScreen} /> */}
     </Stack.Navigator>
   );
 };

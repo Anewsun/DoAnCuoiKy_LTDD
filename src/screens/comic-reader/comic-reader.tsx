@@ -10,12 +10,12 @@ const ComicReaderScreen: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <Header isBackType={"close"} />
+      <Header isBack />
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.contentContainer}
         showsHorizontalScrollIndicator={false}
-        showsVerticalScrollIndicator={true}
+        showsVerticalScrollIndicator={false}
       >
         <Text style={styles.content}>
           {route?.params?.content}

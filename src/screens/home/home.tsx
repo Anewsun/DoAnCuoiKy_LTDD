@@ -46,6 +46,17 @@ const HomeScreen: React.FC = () => {
     },
   ];
 
+  const [bannerIndex, setBannerIndex] = useState(0);
+  const banners = [IMAGES.BANNER,IMAGES.BANNER1, IMAGES.BANNER2];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    }, 3000); // Thay đổi hình ảnh mỗi 3 giây
+
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     const unsubscribe = getComicsService(
       {
@@ -62,7 +73,7 @@ const HomeScreen: React.FC = () => {
   }, [filter]);
 
   const onPressItem = (item: IComic) => {
-    navigation.navigate("ComicDetail", {
+    navigation.navigate("ComicIntroduction", {
       item: item,
     });
   };
@@ -97,7 +108,7 @@ const HomeScreen: React.FC = () => {
           </>
         }
       />
-      <Image source={IMAGES.BANNER} style={styles.banner} />
+      <Image source={banners[bannerIndex]} style={styles.banner} />
       <View style={[styles.container, { marginHorizontal: GAP }]}>
         <Text style={styles.label}>{getLabel()}</Text>
         <FlatList

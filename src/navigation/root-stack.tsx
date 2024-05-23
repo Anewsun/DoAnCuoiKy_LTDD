@@ -23,6 +23,7 @@ import {
   SearchScreen,
   SettingsScreen,
   SignUpScreen,
+  ComicIntroductionScreen
 } from "@screens";
 import React from "react";
 import TabStack from "./tab-stack";
@@ -56,7 +57,8 @@ const RootStack = () => {
           <Stack.Screen name={"ComicReviews"} component={ComicReviewsScreen} />
           <Stack.Screen name={"ComicReader"} component={ComicReaderScreen} />
           <Stack.Screen name={"ComicDetail"} component={ComicDetailScreen} />
-          <Stack.Screen name={"EditComnic"} component={EditComicScreen} />
+          <Stack.Screen name={"EditComic"} component={EditComicScreen} />
+          <Stack.Screen name={"ComicIntroduction"} component={ComicIntroductionScreen} />
         </Stack.Group>
         <Stack.Group>
           <Stack.Screen name={"CreateReview"} component={CreateReviewScreen} />

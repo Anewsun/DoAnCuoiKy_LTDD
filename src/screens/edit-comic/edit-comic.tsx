@@ -15,7 +15,7 @@ import editComicStyles from "./styles";
 
 type EditComicScreenRouteProps = NativeStackScreenProps<
   RootStackParamList,
-  "EditComnic"
+  "EditComic"
 >["route"];
 
 const EditComicScreen: React.FC = () => {

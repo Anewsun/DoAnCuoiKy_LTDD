@@ -42,7 +42,7 @@ const ComicListScreen: React.FC = () => {
       onPress: () => {
         sheetRef.current?.close();
         currentComic &&
-          navigation.navigate("EditComnic", {
+          navigation.navigate("EditComic", {
             item: currentComic,
           });
       },
