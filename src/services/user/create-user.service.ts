@@ -26,7 +26,7 @@ export const createUserService = (
         isAdmin: false,
         id: userCredential.user.uid,
         image:
-          "https://jes.edu.vn/wp-content/uploads/2017/10/h%C3%ACnh-%E1%BA%A3nh.jpg",
+          "https://haycafe.vn/wp-content/uploads/2022/02/Avatar-trang.jpg",
       })
         .then(() => {
           onSuccess();

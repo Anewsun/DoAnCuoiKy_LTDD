@@ -1,5 +1,5 @@
-import { ActivityIndicator, Divider, Input } from "@components";
-import React, { useEffect, useRef, useState } from "react";
+import { ActivityIndicator, Divider, Input, Header } from "@components";
+import React, { useEffect, useState } from "react";
 import { FlatList, Image, Pressable, Text, View } from "react-native";
 import searchStyles from "./styles";
 import { IComic } from "@types";
@@ -7,6 +7,7 @@ import { SORT } from "@constants";
 import { getComicsService } from "@services";
 import { useTranslation } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
+
 const SearchScreen: React.FC = () => {
   const { t } = useTranslation([], { keyPrefix: "searchScreen" });
   const navigation = useNavigation();
@@ -34,6 +35,7 @@ const SearchScreen: React.FC = () => {
 
   return (
     <View style={styles.container}>
+      <Header isBackType="close" />
       <Input
         autoFocus
         placeholder={t("search")}
@@ -51,7 +53,7 @@ const SearchScreen: React.FC = () => {
           return (
             <Pressable
               onPress={() => {
-                navigation.navigate("ComicDetail", {
+                navigation.navigate("ComicIntroduction", {
                   item: item,
                 });
               }}

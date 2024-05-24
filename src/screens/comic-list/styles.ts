@@ -10,7 +10,7 @@ const comicListStyles = makeStyles((theme) => ({
     paddingHorizontal: 16,
   },
   btnCreate: {
-    backgroundColor: colors.yellow,
+    backgroundColor: colors.darkBlue,
   },
   itemContainer: {
     flexDirection: "row",

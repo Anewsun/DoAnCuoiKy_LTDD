@@ -30,9 +30,10 @@ const profileStyles = makeStyles((theme) => ({
     fontFamily: fonts.medium,
     fontSize: fontSizes["md"],
     marginTop: 20,
+    color: 'blue',
   },
   button: {
-    backgroundColor: colors.turquoise,
+    backgroundColor: 'blue',
     marginVertical: 20,
     paddingVertical: 10,
   },

@@ -4,7 +4,6 @@ export { default as LoginScreen } from "./login/login";
 export { default as ProfileScreen } from "./profile/profile";
 export { default as ResetPasswordScreen } from "./reset-password/reset-password";
 export { default as SignUpScreen } from "./sign-up/sign-up";
-export { default as SettingsScreen } from "./settings/settings";
 export { default as ChangePasswordScreen } from "./change-password/change-password";
 export { default as EditProfileScreen } from "./edit-profile/edit-profile";
 export { default as ComicDetailScreen } from "./comic-detail/comic-detail";

@@ -11,7 +11,7 @@ const signUpStyles = makeStyles((theme) => ({
     fontFamily: fonts.medium,
     textAlign: "center",
     marginTop: 120,
-    color: theme.colors["primary"],
+    color: 'blue',
   },
   title: {
     fontSize: fontSizes["lg"],
@@ -26,6 +26,7 @@ const signUpStyles = makeStyles((theme) => ({
   },
   signInButton: {
     marginTop: 40,
+    backgroundColor: 'blue'
   },
   viewSignIn: {
     flexDirection: "row",
@@ -41,7 +42,7 @@ const signUpStyles = makeStyles((theme) => ({
   login: {
     fontFamily: fonts.medium,
     fontSize: fontSizes["md"],
-    color: theme.colors["primary"],
+    color: 'blue',
   },
 }));
 

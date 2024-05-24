@@ -74,7 +74,7 @@ const SignUpScreen: React.FC = () => {
       showsVerticalScrollIndicator={false}
     >
       <View style={styles.container}>
-        <Text style={styles.appName}>comic app ●</Text>
+        <Text style={styles.appName}>HTReader App●</Text>
         <Text style={styles.title}>{t("pleaseSignUp")}</Text>
         <Input
           placeholder={t("fullname")}

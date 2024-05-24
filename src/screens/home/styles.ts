@@ -44,6 +44,7 @@ const homeStyles = makeStyles((theme) => ({
     position: "absolute",
     right: 5,
     bottom: 50,
+    backgroundColor: 'blue',
   },
 }));
 export default homeStyles;

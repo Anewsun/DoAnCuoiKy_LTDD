@@ -18,6 +18,7 @@ const resetPasswordStyles = makeStyles((theme) => ({
   },
   submitButton: {
     marginTop: 40,
+    backgroundColor: 'blue',
   },
   pleaseCheck: {
     fontSize: fontSizes["xl"],

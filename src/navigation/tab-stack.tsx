@@ -5,8 +5,6 @@ import {
   createBottomTabNavigator,
 } from "@react-navigation/bottom-tabs";
 import {
-  ComicListScreen,
-  FavoriteListScreen,
   HomeScreen,
   ProfileScreen,
 } from "@screens";

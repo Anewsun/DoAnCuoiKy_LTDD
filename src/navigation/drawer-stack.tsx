@@ -9,13 +9,13 @@ import React from "react";
 import TabStack from "./tab-stack";
 import { useAppSelector } from "@redux";
 import { ComicListScreen, FavoriteListScreen } from "@screens";
+
 const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const options: DrawerNavigationOptions = {
   headerShown: false,
   drawerType: "back",
-  // overlayColor: "transparent",
   drawerStyle: {
     backgroundColor: "transparent",
     width: "66%",
@@ -26,15 +26,10 @@ const MyStack = () => {
   const user = useAppSelector((state) => state.auth.user);
 
   return (
-    <Drawer.Navigator
-      screenOptions={options}
-      // drawerContent={(props) => {
-      //   return <DrawerContent {...props} />;
-      // }}
-    >
+    <Drawer.Navigator screenOptions={options} >
       <Stack.Screen name={"Trang chủ"} component={TabStack} />
       {user?.isAdmin && (
-        <Stack.Screen name={"Đăng bài"} component={ComicListScreen} />
+        <Stack.Screen name={"Đăng truyện"} component={ComicListScreen} />
       )}
       {!user?.isAdmin && (
         <Stack.Screen

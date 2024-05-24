@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import {
   CardStyleInterpolators,
-  HeaderStyleInterpolators,
   StackNavigationOptions,
   createStackNavigator,
 } from "@react-navigation/stack";
@@ -17,11 +16,9 @@ import {
   EditComicScreen,
   EditProfileScreen,
   EditReviewScreen,
-  FavoriteListScreen,
   LoginScreen,
   ResetPasswordScreen,
   SearchScreen,
-  SettingsScreen,
   SignUpScreen,
   ComicIntroductionScreen
 } from "@screens";
@@ -30,8 +27,6 @@ import TabStack from "./tab-stack";
 import { RootStackParamList } from "./types";
 import DrawerStack from "./drawer-stack";
 
-// some import
-import { Animated, Easing } from "react-native";
 const Stack = createStackNavigator<RootStackParamList>();
 
 const options: StackNavigationOptions = {
@@ -64,7 +59,6 @@ const RootStack = () => {
           <Stack.Screen name={"CreateReview"} component={CreateReviewScreen} />
           <Stack.Screen name={"EditReview"} component={EditReviewScreen} />
         </Stack.Group>
-        <Stack.Screen name={"Settings"} component={SettingsScreen} />
         <Stack.Screen name={"EditProfile"} component={EditProfileScreen} />
         <Stack.Screen name={"Search"} component={SearchScreen} />
         <Stack.Screen

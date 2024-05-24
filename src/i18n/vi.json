@@ -14,7 +14,7 @@
     "loginSuccess": "Đăng nhập thành công !"
   },
   "signUpScreen": {
-    "pleaseSignUp": "Đăng ký để tham gia đọc truyện!",
+    "pleaseSignUp": "Đăng ký để sử dụng app!",
     "signUp": "Đăng ký",
     "fullname": "Tên của bạn",
     "email": "Email",
@@ -63,6 +63,8 @@
     "labelFullname": "Tên",
     "hintFullname": "Nhập tên",
     "enterFullname": "Vui lòng nhập tên của bạn",
+    "enterImage": "Nhập link ảnh avartar",
+    "labelImage": "Link ảnh avatar",
     "labelEmail": "Email",
     "submit": "Lưu",
     "updatedSuccess": "Cập nhật thông tin người dùng thành công"
@@ -103,18 +105,18 @@
   },
   "comicDetailScreen": {
     "title": "Chi tiết truyện",
-    "writeAReview": "Đánh giá",
+    "writeAReview": "Bình luận",
     "readNow": "Đọc ngay",
     "addedFavorite": "Đã thêm vào yêu thích",
     "deletedFavorite": "Đã xoá khỏi yêu thích",
     "share": "Truy cập",
     "favorite": "Yêu thích",
-    "seeReviews": "Xem Đánh giá"
+    "seeReviews": "Xem Bình luận"
   },
   "createReviewScreen": {
     "post": "Gửi",
-    "rateThisComic": "Đánh giá truyện",
-    "enterReview": "Nhập đánh giá (tuỳ chọn)",
+    "rateThisComic": "Bình luận",
+    "enterReview": "Nhập bình luận (tuỳ chọn)",
     "minRating": "Vui lòng đánh giá số sao"
   },
   "editReviewScreen": {
@@ -124,10 +126,10 @@
     "minRating": "Vui lòng đánh giá số sao"
   },
   "comicReviewsScreen": {
-    "title": "Thông tin đánh giá",
+    "title": "Thông tin bình luận",
     "delete": "Xoá",
     "edit": "Sửa",
-    "noReviewsYet": "Chưa có đánh giá"
+    "noReviewsYet": "Chưa có bình luận"
   },
   "favoritesScreen": {
     "title": "Truyện đã yêu thích",
@@ -138,7 +140,7 @@
     "deletedFavorite": "Đã xoá khỏi yêu thích"
   },
   "comicListScreen": {
-    "title": "Đăng bài",
+    "title": "Đăng truyện",
     "edit": "Sửa",
     "delete": "Xoá",
     "createComic": "Thêm truyện"

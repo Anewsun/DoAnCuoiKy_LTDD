@@ -5,6 +5,7 @@ import { doc, serverTimestamp, updateDoc } from "firebase/firestore";
 
 export interface IInputEditUserService {
   fullname?: string;
+  image?: string;
 }
 
 export const editUserService = (

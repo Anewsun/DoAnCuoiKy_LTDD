@@ -126,7 +126,7 @@ export const TabBar = ({
 const styles = StyleSheet.create({
   tabContainer: {
     width: WINDOW_WIDTH,
-    backgroundColor: colors.red,
+    backgroundColor: colors.darkBlue,
   },
   slider: {
     height: 2,

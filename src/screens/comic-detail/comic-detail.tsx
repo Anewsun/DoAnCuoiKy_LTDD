@@ -4,23 +4,21 @@ import { useNavigation, useRoute } from "@react-navigation/native";
 import { useAppSelector } from "@redux";
 import {
   createFavouriteService,
-  deleteFavoriteService,
   getComicService,
   getReviewsService,
 } from "@services";
 import { IComic, IReview } from "@types";
 import { message } from "@utils";
 import i18next from "i18next";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Text, TouchableOpacity, View } from "react-native";
-import FastImage from "react-native-fast-image";
+import { Text, TouchableOpacity, View, ScrollView, Animated } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Share from "react-native-share";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import comicDetailStyles from "./styles";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "@navigation";
-import { ScrollView } from "react-native-gesture-handler";
 
 type ComicDetailScreenRouteProps = NativeStackScreenProps<
   RootStackParamList,
@@ -37,6 +35,8 @@ const ComicDetailScreen: React.FC = () => {
   const { showLoading, hideLoading } = useLoading();
   const theme = useTheme();
   const item = route.params.item;
+  const scrollViewRef = useRef<ScrollView>(null);
+  const backButtonOpacity = useRef(new Animated.Value(0)).current;
 
   const [data, setData] = useState<IComic>(item);
   const [currentReview, setCurrentReview] = useState<Array<IReview>>([]);
@@ -44,6 +44,26 @@ const ComicDetailScreen: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
   const favorite = useAppSelector((state) => state.favorite);
   const isFavorite = favorite.some((e) => e.comicId == item.id);
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    // Lấy vị trí cuộn từ AsyncStorage khi khởi động component
+    const fetchScrollPosition = async () => {
+      const savedPosition = await AsyncStorage.getItem(`scrollPosition_${item.id}`);
+      if (savedPosition) {
+        setScrollPosition(parseInt(savedPosition, 10));
+      }
+    };
+
+    fetchScrollPosition();
+  }, [item.id]);
+
+  useEffect(() => {
+    // Cuộn đến vị trí lưu trữ khi khởi động component
+    if (scrollViewRef.current) {
+      scrollViewRef.current.scrollTo({ y: scrollPosition, animated: false });
+    }
+  }, [scrollPosition]);
 
   useEffect(() => {
     getComicService(item.id, (data) => {
@@ -123,9 +143,33 @@ const ComicDetailScreen: React.FC = () => {
     }
   };
 
+  const handleScroll = async (event) => {
+    const position = event.nativeEvent.contentOffset.y;
+    await AsyncStorage.setItem(`scrollPosition_${item.id}`, position.toString());
+    // Hiển thị nút back khi người dùng cuộn xuống
+    if (position > 50) {
+      Animated.timing(backButtonOpacity, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: true,
+      }).start();
+    } else {
+      Animated.timing(backButtonOpacity, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }).start();
+    }
+  };
+
   return (
     <>
-      <ScrollView style={styles.container}>
+      <ScrollView
+        ref={scrollViewRef}
+        style={styles.container}
+        onScrollEndDrag={handleScroll}
+        onMomentumScrollEnd={handleScroll}
+      >
         <Header isBack={true} title={data.title} />
         <Text style={styles.content}>{data.content}</Text>
       </ScrollView>
@@ -161,6 +205,11 @@ const ComicDetailScreen: React.FC = () => {
           uppercase
         />
       </View>
+      <Animated.View style={[styles.backButton, { opacity: backButtonOpacity }]}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>Quay lại</Text>
+        </TouchableOpacity>
+      </Animated.View>
     </>
   );
 };

@@ -27,7 +27,7 @@ const comicDetailStyles = makeStyles((theme) => ({
   },
   btnShare: {
     backgroundColor: colors.turquoise,
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 15,
   },
@@ -39,9 +39,27 @@ const comicDetailStyles = makeStyles((theme) => ({
   },
   btnReview: {
     backgroundColor: colors.darkBlue,
-    paddingHorizontal: 20,
+    paddingHorizontal: 15,
     paddingVertical: 10,
     borderRadius: 15,
+  },
+  backButton: {
+    position: "absolute",
+    bottom: 50,
+    right: 20,
+    backgroundColor: colors.white,
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderRadius: 30,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
+  },
+  backButtonText: {
+    color: "black",
+    fontSize: 18,
   },
 }));
 export default comicDetailStyles;

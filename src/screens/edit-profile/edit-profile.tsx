@@ -23,10 +23,12 @@ const EditProfileScreen: React.FC = () => {
 
   const validationSchema = Yup.object().shape({
     fullname: Yup.string().required(t("enterFullname")),
+    image: Yup.string().url(t("enterImage")),
   });
 
   const initialValues = {
     fullname: user?.fullname,
+    image: user?.image || "",
   };
 
   const {
@@ -48,11 +50,12 @@ const EditProfileScreen: React.FC = () => {
           user?.id,
           {
             fullname: values.fullname,
+            image: values.image,
           },
           () => {
             hideLoading();
             dispatch(
-              authSlice.actions.updateUser({ fullname: values.fullname })
+              authSlice.actions.updateUser({ fullname: values.fullname, image: values.image })
             );
             message.success(t("updatedSuccess"));
           },
@@ -98,6 +101,18 @@ const EditProfileScreen: React.FC = () => {
             touched.fullname && errors.fullname ? errors.fullname : undefined
           }
           style={styles.inputSpacing}
+        />
+        <Input
+        label={t("labelImage")}
+        placeholder={t("enterImage")}
+        value={values.image}
+        onChangeText={(text) => {
+          setFieldValue("image", text);
+          setFieldTouched("image", true, false);
+        }}
+        onBlur={handleBlur("image")}
+        error={touched.image && errors.image ? errors.image : undefined}
+        style={styles.inputSpacing}
         />
         <Input
           editable={false}
